@@ -27,7 +27,13 @@ export default function useHttp(url, config, initialData) {
     async function sendRequest(data) {
       setIsLoading(true);
       try {
-        const resData = await sendHttpRequest(url, { ...config, body: data });
+        const resData = await sendHttpRequest(
+          `${import.meta.env.VITE_API_ENDPOINT}${url}`,
+          {
+            ...config,
+            body: data,
+          }
+        );
         setData(resData);
       } catch (error) {
         setError(error.message || "Something went wrong!");
