@@ -4,3 +4,4 @@ It covers aspects such as data fetching, component creation, context and reducer
 Domain: https://food-order-kohl.vercel.app/
 
 
+![Screenshot](home-page.png)
